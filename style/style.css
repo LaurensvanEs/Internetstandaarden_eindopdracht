@@ -1,0 +1,188 @@
+/* removes default padding & margin */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the navbar */
+nav {
+    position: fixed; /* Fixes the navbar in place */
+    top: 0; /* Places it at the top of the viewport */
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    color: #333;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2; /* Sets a higher z-index to prevent overlap on top of the page */
+}
+
+/* Style for the logo */
+nav img {
+    width: 20%;
+
+}
+
+/* Style for the navigation links */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Style for the landing page section on the homepage */
+.landing-section {
+    position: relative; /* Make it a positioned element */
+    z-index: 1; /* Set a lower z-index than navbar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 40px;
+    height: 90vh;
+    margin: 0;
+}
+
+/* Style for the camera cards on the homepage*/
+.featured-cameras {
+    text-align: center;
+}
+
+.camera-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px; /*the margin for space between cards */
+  text-align: center;
+  background-color: #333;
+  border-radius: 5px;
+  display: inline-block;
+  width: 30%; /* Three columns on larger screens */
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.camera-card ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%; /*to center text */
+}
+
+.camera-card img {
+    max-height: 200px;
+    max-width: 400px;
+    border-radius: 15%;
+    padding: 5%;
+}
+
+.camera-section {
+    text-align: center;
+}
+
+/* Style for the title card on the rest of the pages */
+.title-card {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 5vh;
+    height: 50vh;
+}
+
+/* Style for the buttons on the cameras page */
+.cost-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; /* Spacing between buttons */
+    padding: 0;
+}
+
+.cost-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10%;
+    background-color: #FF5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cost-button a:hover {
+    background-color: #E64A19;
+}
+
+.sources {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style for the video section on the my work page */
+.video-section{
+    text-align: center;
+}
+
+.video-container iframe {
+    width: 560px;
+    height: 315px;
+    margin-bottom: 2.5%;
+}
+
+/* Style for the about section on the about page */
+.about-section {
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+/* Style for the footer section */
+.footer-section {
+    text-align: center;
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px; 
+}
+
+.footer-section a {
+    color: #fff;
+}
+
+/* CSS for mobile devices */
+@media screen and (max-width: 768px) {
+    .camera-card {
+        width: 80%; /* 80% width on mobile, stacking cards */
+    }
+
+    .camera-card img {
+        max-width: 250px;
+    }
+
+    .video-container iframe {
+        width: 320px;
+        height: auto;
+    }
+}
